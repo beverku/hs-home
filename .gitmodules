@@ -1,0 +1,3 @@
+[submodule "repos/homeshick"]
+	path = repos/homeshick
+	url = https://github.com/andsens/homeshick.git
