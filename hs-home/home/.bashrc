@@ -4,8 +4,14 @@
 [[ "$-" != *i* ]] && return
 
 
+
+if [ -f ~/.bashrc.thismachine.first.bash ]; then
+	source ~/.bashrc.thismachine.first.bash
+fi
+
+
 # Export
-export PATH=$PATH:/Users/rbever/bin:$GRADLE_HOME/bin:$PHANTOM_HOME/bin
+export PATH=$PATH:${HOME}/bin
 
 #JAVA_HOME set in ~/.launchd.conf
 #export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
@@ -56,5 +62,14 @@ set -o vi
 if [ -n "$PS1" ]; then
     . ~/.my-git-prompt.bash
     PS1='\n\[\033[38;5;64m\]\u@\h \[\033[38;5;24m\]\w\033[00m $(git_prompt) \n\$ '
+fi
+
+
+if [ -f ~/.homesick/repos/homeshick/homeshick.sh ]; then
+	source ~/.homesick/repos/homeshick/homeshick.sh
+fi
+
+if [ -f ~/.bashrc.thismachine.bash ]; then
+	source ~/.bashrc.thismachine.bash
 fi
 
