@@ -1,13 +1,14 @@
 # ~/.bashrc: executed by bash(1) for interactive shells.
 
-# If not running interactively, don't do anything
-[[ "$-" != *i* ]] && return
 
-
-
+#Always execute this configuration regardless of interactivity
 if [ -f ~/.bashrc.thismachine.first.bash ]; then
 	source ~/.bashrc.thismachine.first.bash
 fi
+
+
+# If not running interactively, don't do anything - below here
+[[ "$-" != *i* ]] && return
 
 
 # Export
@@ -90,5 +91,4 @@ fi
 if [ -f ~/.bashrc.thismachine.bash ]; then
 	source ~/.bashrc.thismachine.bash
 fi
-
 
