@@ -55,14 +55,32 @@ alias llah='ls -lAh'                              # all but . and ..
 set -o vi
 
 
-#Source in bash completion
+#Source in git-bash completion
 . ~/.git-completion.bash
+
+#Create completion aware git <alias> aliases
+function_exists() {
+    declare -f -F $1 > /dev/null
+    return $?
+}
+
+#for al in `__git_aliases`; do
+for al in `git config -l | grep ^alias | sed "s/alias\.//" | sed "s/=.*$//"`; do
+    alias g$al="git $al"
+
+    complete_func=_git_$(__git_aliased_command $al)
+    function_exists $complete_fnc && __git_complete g$al $complete_func
+done
+
+
+
 
 # If an interactive shell set the prompt to add my-git-prompt
 if [ -n "$PS1" ]; then
     . ~/.my-git-prompt.bash
     PS1='\n\[\033[38;5;64m\]\u@\h \[\033[38;5;24m\]\w\033[00m $(git_prompt) \n\$ '
 fi
+
 
 
 if [ -f ~/.homesick/repos/homeshick/homeshick.sh ]; then
@@ -72,4 +90,5 @@ fi
 if [ -f ~/.bashrc.thismachine.bash ]; then
 	source ~/.bashrc.thismachine.bash
 fi
+
 
