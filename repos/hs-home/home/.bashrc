@@ -13,6 +13,7 @@ fi
 
 # Export
 export PATH=$PATH:${HOME}/bin
+export TERM=xterm-256color
 
 #JAVA_HOME set in ~/.launchd.conf
 #export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
@@ -47,6 +48,9 @@ alias ll='ls -l'                              # long list
 alias la='ls -A'                              # all but . and ..
 alias lla='ls -lA'                              # all but . and ..
 alias llah='ls -lAh'                              # all but . and ..
+
+#cd to git project root
+alias cdr='cd "$(git rev-parse --show-toplevel)"'
 
 #alias vim='gvim'
 #alias vi='vim'
@@ -92,3 +96,4 @@ if [ -f ~/.bashrc.thismachine.bash ]; then
 	source ~/.bashrc.thismachine.bash
 fi
 
+shopt -s extglob

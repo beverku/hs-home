@@ -1,20 +1,20 @@
 [user]
+	email = rbever@netapp.com
 	name = Ryan Bever
-	email = beverku@gmail.com
 [push]
 	default = simple
-[core]
-	excludesfile = ~/.gitignore
 [diff]
 	tool = meld
 [merge]
 	tool = meld
 [difftool]
 	prompt = false
+[core]
+	excludesfile = ~/.gitignore
 [alias]
 	#one-line log
-	ll = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
-	l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short -15
+	ll = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate --date=short
+	l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate --date=short -15
 	#last commit
 	last = log -1 HEAD
 	#log graphs
@@ -47,4 +47,5 @@
 
     # list aliases
     la = "!git config -l | grep alias | cut -c 7-"
-
+[credential]
+	helper = store
