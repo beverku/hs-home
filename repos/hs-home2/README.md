@@ -20,3 +20,26 @@ https://github.com/vim-airline/vim-airline/wiki/FAQ
 
 NOTE: I actually have this set to inconsolata and it seems to work fine, but if you have trouble switch to meslo
 
+
+Adding a symlinked git submodule
+See: https://github.com/andsens/homeshick/wiki/Symlinking#shallow-symlinking
+
+```
+cd ~/.homesick/repos/hs-home2
+git submodule add ...
+cd home
+ln -s ../oh-my-zsh/ .oh-my-zsh
+# lrwxr-xr-x  1 rbever  staff    13B Jun 11 10:27 .oh-my-zsh@ -> ../oh-my-zsh/
+```
+
+#PowerLevel9k
+```
+cd ~/.homesick/repos/hs-home2
+git submodule add https://github.com/bhilburn/powerlevel9k.git
+cd ~/.homesick/repos/hs-home2/oh-my-zsh/custom (master) 
+mkdir themes
+cd themes
+ln -s ../../../powerlevel9k/
+```
+
+

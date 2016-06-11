@@ -1,3 +1,9 @@
 [submodule "repos/homeshick"]
 	path = repos/homeshick
 	url = https://github.com/andsens/homeshick.git
+[submodule "repos/hs-home2/oh-my-zsh"]
+	path = repos/hs-home2/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "repos/hs-home2/powerlevel9k"]
+	path = repos/hs-home2/powerlevel9k
+	url = https://github.com/bhilburn/powerlevel9k.git
