@@ -12,7 +12,7 @@ fi
 
 
 # Export
-export PATH=$PATH:${HOME}/bin
+export PATH=${HOME}/bin:$PATH
 export TERM=xterm-256color
 
 #JAVA_HOME set in ~/.launchd.conf

@@ -15,7 +15,9 @@ https://github.com/powerline/fonts/tree/master/Meslo
 - Just double click the meslo_lg_m_regular_for_powerline.otf font file and click the install button
 
 Also you may need to set the set the system font
-System->Preferences->Appearance->Fonts->Fixed Width Fonts
+OSX: -System->Preferences->Appearance->Fonts->Fixed Width Fonts
+RHEL: System->Preferences->Appearance->Fonts->Fixed Width Fonts
+UBUNTU 14.04 with gnome3: gnome-tweak-tool -> Fonts -> Monospace
 https://github.com/vim-airline/vim-airline/wiki/FAQ
 
 NOTE: I actually have this set to inconsolata and it seems to work fine, but if you have trouble switch to meslo

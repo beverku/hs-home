@@ -29,7 +29,8 @@ syntax on                  " syntax highlighting
 set laststatus=2           " status line always on
 set number                 " show line numbers
 let g:airline_powerline_fonts = 1
-colorscheme Tomorrow
+colorscheme lucius
+LuciusDark
 hi LineNr ctermfg=252
 hi VertSplit ctermfg=252 ctermbg=254
 hi Search ctermbg=254

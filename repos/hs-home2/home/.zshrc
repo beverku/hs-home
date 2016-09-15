@@ -12,7 +12,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -27,7 +27,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -60,6 +60,7 @@ plugins=(git git-flow)
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+unsetopt share_history
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -115,6 +116,11 @@ alias cdr='cd "$(git rev-parse --show-toplevel)"'
 
 #alias vim='gvim'
 #alias vi='vim'
+#alias vim='nvim'
+#alias vi='nvim'
+#alias oldvim='/usr/bin/vim'
+alias egrep='egrep --color'
+alias grep='egrep'
 
 
 #Set vi editing mode
@@ -123,6 +129,8 @@ set -o vi
 
 
 #Powerlevel9k
+#POWERLEVEL9K_MODE='awesome-fontconfig'
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status battery time)
 
@@ -138,6 +146,9 @@ POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='red'
 POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='black'
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='red'
 
+# Tell zsh not to trust it's autocomplete cache
+# https://unix.stackexchange.com/questions/2179/rebuild-auto-complete-index-or-whatever-its-called-and-binaries-in-path-cach
+zstyle ":completion:*:commands" rehash 1
 
 if [ -f ~/.homesick/repos/homeshick/homeshick.sh ]; then
     source ~/.homesick/repos/homeshick/homeshick.sh
