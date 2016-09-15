@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/rbever/.oh-my-zsh
+export TERM=xterm-256color
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -102,7 +103,6 @@ fi
 
 # Export
 export PATH=${HOME}/bin:$PATH:
-export TERM=xterm-256color
 
 # Some shortcuts for different directory listings
 alias ls='ls -FGh'                 # classify files in colour
