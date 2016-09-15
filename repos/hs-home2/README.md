@@ -1,4 +1,4 @@
-# hs-home
+# hs-home2
 Homesick dofiles
 
 See: https://github.com/technicalpickles/homesick#readme
@@ -26,22 +26,19 @@ NOTE: I actually have this set to inconsolata and it seems to work fine, but if 
 Adding a symlinked git submodule
 See: https://github.com/andsens/homeshick/wiki/Symlinking#shallow-symlinking
 
-```
-cd ~/.homesick/repos/hs-home2
-git submodule add ...
-cd home
-ln -s ../oh-my-zsh/ .oh-my-zsh
-# lrwxr-xr-x  1 rbever  staff    13B Jun 11 10:27 .oh-my-zsh@ -> ../oh-my-zsh/
-```
+To Setup this repo of my dotfiles
 
-#PowerLevel9k
+#Install Oh-my-zsh
 ```
-cd ~/.homesick/repos/hs-home2
-git submodule add https://github.com/bhilburn/powerlevel9k.git
-cd ~/.homesick/repos/hs-home2/oh-my-zsh/custom (master) 
-mkdir themes
-cd themes
-ln -s ../../../powerlevel9k/
+cd
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
-
+#Install PowerLevel9k
+```
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+```
+#Install PowerLevel9k
+```
+homeshick link hs-home2
+```
 
