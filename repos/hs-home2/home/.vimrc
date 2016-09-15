@@ -60,6 +60,7 @@ autocmd Filetype eruby setlocal ts=2 sw=2 expandtab
 " FILETYPE-SPECIFIC
 autocmd BufNewFile,BufRead *.md setlocal ft=markdown
 autocmd FileType ruby compiler ruby
+" let g:jsx_ext_required = 0
 
 
 " KEY MAPPINGS
