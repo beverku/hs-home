@@ -16,6 +16,7 @@ set noswapfile             " don't create swap files while editing
 set writebackup            " use backup when saving files
 set hidden                 " Allow switching buffers without saving
 set noeb vb t_vb=          " Turn off error bells
+set mouse=a                " Mouse mode
 
 " COPY PASTE
 source $VIMRUNTIME/mswin.vim
