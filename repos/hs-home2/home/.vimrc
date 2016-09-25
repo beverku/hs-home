@@ -29,8 +29,8 @@ syntax on                  " syntax highlighting
 set laststatus=2           " status line always on
 set number                 " show line numbers
 let g:airline_powerline_fonts = 1
-colorscheme lucius
-LuciusDark
+"colorscheme lucius
+"LuciusDark
 hi LineNr ctermfg=252
 hi VertSplit ctermfg=252 ctermbg=254
 hi Search ctermbg=254
@@ -49,6 +49,7 @@ set hlsearch               " highlight search results
 set expandtab
 set autoindent
 set smartindent
+au! FileType python setl nosmartindent
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
