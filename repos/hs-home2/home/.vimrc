@@ -18,6 +18,23 @@ set hidden                 " Allow switching buffers without saving
 set noeb vb t_vb=          " Turn off error bells
 set mouse=a                " Mouse mode
 
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+if has("autocmd")
+    " For all text files set 'textwidth' to 78 characters.
+    autocmd FileType text setlocal textwidth=78
+
+    " When editing a file, always jump to the last known cursor position.
+    " Don't do it when the position is invalid or when inside an event handler
+    " (happens when dropping a file on gvim).
+    " Also don't do it when the mark is in the first line, that is the default
+    " position when opening a file.
+    autocmd BufReadPost *
+        \ if line("'\"") > 1 && line("'\"") <= line("$") |
+        \   exe "normal! g`\"" |
+        \ endif
+endif
+
 " COPY PASTE
 source $VIMRUNTIME/mswin.vim
 behave mswin
