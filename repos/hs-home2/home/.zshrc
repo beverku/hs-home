@@ -104,6 +104,10 @@ fi
 # Export
 export PATH=${HOME}/bin:$PATH:
 
+# Python startup file
+# See: http://brandon.invergo.net/news/2014-03-21-Enhancing-the-Python-interpreter-with-a-start-up-script.html
+export PYTHONSTARTUP=$HOME/.config/python/python-startup.py
+
 # Some shortcuts for different directory listings
 alias ls='ls -FGh'                 # classify files in colour
 alias ll='ls -l'                              # long list
