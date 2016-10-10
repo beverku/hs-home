@@ -50,7 +50,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow)
+plugins=(git git-flow virtualenv virtualenvwrapper)
 
 
 
@@ -132,7 +132,7 @@ set -o vi
 #POWERLEVEL9K_MODE='awesome-fontconfig'
 #POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status battery time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv battery time)
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=false
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=false
