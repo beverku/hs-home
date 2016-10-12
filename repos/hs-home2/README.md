@@ -27,6 +27,10 @@ Adding a symlinked git submodule
 See: https://github.com/andsens/homeshick/wiki/Symlinking#shallow-symlinking
 
 To Setup this repo of my dotfiles
+```
+git clone git://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick
+.homesick/repos/homeshick/bin/homeshick link hs-home2
+```
 
 #Install Oh-my-zsh
 ```
@@ -40,6 +44,8 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 #Install tmux
 ```
 brew install tmux
+#or
+sudo apt install tmux
 ```
 #Link
 ```
