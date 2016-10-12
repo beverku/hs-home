@@ -1,0 +1,28 @@
+[global_config]
+  inactive_color_offset = 0.5
+  title_inactive_bg_color = "#303030"
+  title_inactive_fg_color = "#d7d7d7"
+  title_transmit_bg_color = "#303030"
+  title_transmit_fg_color = "#d7d7d7"
+[keybindings]
+  copy = <Primary>c
+  paste = <Primary>v
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#303030"
+    background_image = None
+    cursor_color = "#d7d7d7"
+    font = Meslo LG M DZ for Powerline 9
+    foreground_color = "#d7d7d7"
+    palette = "#303030:#ff5f5f:#afd787:#d7d7af:#87d7ff:#d7afd7:#87d7af:#d7d7d7:#303030:#ff5f5f:#afd787:#d7d7af:#87d7ff:#d7afd7:#87d7af:#d7d7d7"
+    scrollback_infinite = True
+    use_system_font = False
