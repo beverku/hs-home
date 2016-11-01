@@ -12,12 +12,13 @@ This file comes from here:
 https://github.com/powerline/fonts
 https://github.com/powerline/fonts/tree/master/Meslo
 
-- Just double click the meslo_lg_m_regular_for_powerline.otf font file and click the install button
+- Just double click the meslo_lg_m_regular_for_powerline-patched.ttf font file and click the install button
+- Also install Inconsolata+Awesome.ttf 
 
-Also you may need to set the set the system font
-OSX: -System->Preferences->Appearance->Fonts->Fixed Width Fonts
-RHEL: System->Preferences->Appearance->Fonts->Fixed Width Fonts
-UBUNTU 14.04 with gnome3: gnome-tweak-tool -> Fonts -> Monospace
+Also you may need to set the set the system font  
+OSX: -System->Preferences->Appearance->Fonts->Fixed Width Fonts  
+RHEL: System->Preferences->Appearance->Fonts->Fixed Width Fonts  
+UBUNTU 14.04 with gnome3: gnome-tweak-tool -> Fonts -> Monospace  
 https://github.com/vim-airline/vim-airline/wiki/FAQ
 
 NOTE: I actually have this set to inconsolata and it seems to work fine, but if you have trouble switch to meslo
@@ -27,6 +28,10 @@ Adding a symlinked git submodule
 See: https://github.com/andsens/homeshick/wiki/Symlinking#shallow-symlinking
 
 To Setup this repo of my dotfiles
+```
+git clone git://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick
+.homesick/repos/homeshick/bin/homeshick link hs-home2
+```
 
 #Install Oh-my-zsh
 ```
@@ -40,6 +45,8 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 #Install tmux
 ```
 brew install tmux
+#or
+sudo apt install tmux
 ```
 #Link
 ```

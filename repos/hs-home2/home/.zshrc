@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/rbever/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 export TERM=xterm-256color
 
 # Set name of the theme to load.
@@ -38,18 +38,15 @@ ENABLE_CORRECTION="true"
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+# Settings for virtualenvwrapper - need to be before plugins
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/git
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+# export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+#source /usr/local/bin/virtualenvwrapper.sh
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(git git-flow virtualenv virtualenvwrapper)
 
 
@@ -125,6 +122,9 @@ alias cdr='cd "$(git rev-parse --show-toplevel)"'
 #alias oldvim='/usr/bin/vim'
 alias egrep='egrep --color'
 alias grep='egrep'
+
+alias pbcopy='xclip -selection primary'
+alias pbpaste='xclip -selection primary -o'
 
 
 #Set vi editing mode
