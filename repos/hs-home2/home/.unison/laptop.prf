@@ -1,0 +1,27 @@
+# Roots of the synchronization
+root = /home/rbever
+root = ssh://laptop//Users/rbever
+
+# Paths to synchronize 
+path = shared
+
+# Some regexps specifying names and paths to ignore
+ignore = Name .idea
+ignore = Name .DS_Store
+
+# Follow sym links
+follow = Name *
+
+# Keep a backup copy of every file in a central location
+backuplocation = central
+# Use the default equivalent to: backupdir = /home/rbever/.unison/backup 
+backup = Path *
+# backupprefix = $VERSION.
+# backupsuffix = 
+
+# Use this command for displaying diffs
+diff = diff -y -W 79 --suppress-common-lines
+
+# Log actions to logfile
+log = true
+logfile = /var/log/unison.log
