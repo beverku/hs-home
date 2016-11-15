@@ -41,7 +41,7 @@ ENABLE_CORRECTION="true"
 # Settings for virtualenvwrapper - need to be before plugins
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/git
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_PYTHON=python3
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 # export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 #source /usr/local/bin/virtualenvwrapper.sh
@@ -100,6 +100,10 @@ fi
 
 # Export
 export PATH=${HOME}/bin:$PATH:
+
+# Python startup file
+# See: http://brandon.invergo.net/news/2014-03-21-Enhancing-the-Python-interpreter-with-a-start-up-script.html
+export PYTHONSTARTUP=$HOME/.config/python/python-startup.py
 
 # Some shortcuts for different directory listings
 alias ls='ls -FGh'                 # classify files in colour
