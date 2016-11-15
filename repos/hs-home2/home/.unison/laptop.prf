@@ -8,6 +8,7 @@ path = shared
 # Some regexps specifying names and paths to ignore
 ignore = Name .idea
 ignore = Name .DS_Store
+ignore = Name __pycache__
 
 # Follow sym links
 follow = Name *
