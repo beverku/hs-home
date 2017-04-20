@@ -42,8 +42,15 @@ ENABLE_CORRECTION="true"
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/git
 export VIRTUALENVWRAPPER_PYTHON=python3
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
-# export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+case `uname` in
+    Darwin)
+        export VIRTUALENVWRAPPER_VIRTUALENV=/Library/Frameworks/Python.framework/Versions/3.5/bin/virtualenv
+        ;;
+    *)
+        export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+        ;;
+esac
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 #source /usr/local/bin/virtualenvwrapper.sh
 
 
