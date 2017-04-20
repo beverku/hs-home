@@ -29,8 +29,8 @@ See: https://github.com/andsens/homeshick/wiki/Symlinking#shallow-symlinking
 
 To Setup this repo of my dotfiles
 ```
+git clone git@github.com:beverku/hs-home.git .homesick
 git clone git://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick
-.homesick/repos/homeshick/bin/homeshick link hs-home2
 ```
 
 #Install Oh-my-zsh
@@ -50,6 +50,6 @@ sudo apt install tmux
 ```
 #Link
 ```
-homeshick link hs-home2
+.homesick/repos/homeshick/bin/homeshick link hs-home2
 ```
 
