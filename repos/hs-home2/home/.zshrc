@@ -41,7 +41,7 @@ ENABLE_CORRECTION="true"
 # Settings for virtualenvwrapper - need to be before plugins
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/git
-export VIRTUALENVWRAPPER_PYTHON=python3
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 case `uname` in
     Darwin)
         export VIRTUALENVWRAPPER_VIRTUALENV=/Library/Frameworks/Python.framework/Versions/3.5/bin/virtualenv
