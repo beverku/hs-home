@@ -45,6 +45,8 @@ export VIRTUALENVWRAPPER_PYTHON=python3
 case `uname` in
     Darwin)
         export VIRTUALENVWRAPPER_VIRTUALENV=/Library/Frameworks/Python.framework/Versions/3.5/bin/virtualenv
+        alias gvim='mvim'                 # classify files in colour
+        alias md5sum='md5'                 # classify files in colour
         ;;
     *)
         export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
@@ -106,7 +108,7 @@ fi
 
 
 # Export
-export PATH=${HOME}/bin:$PATH:
+export PATH=${HOME}/bin:$PATH:/usr/local/bin
 
 # Python startup file
 # See: http://brandon.invergo.net/news/2014-03-21-Enhancing-the-Python-interpreter-with-a-start-up-script.html
@@ -133,6 +135,7 @@ alias grep='egrep'
 alias pbcopy='xclip -selection primary'
 alias pbpaste='xclip -selection primary -o'
 
+alias agl='ag --literal'
 
 #Set vi editing mode
 set -o vi
@@ -143,7 +146,7 @@ set -o vi
 #POWERLEVEL9K_MODE='awesome-fontconfig'
 #POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv battery time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv time)
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=false
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=false
