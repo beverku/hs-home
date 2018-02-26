@@ -9,6 +9,14 @@ path = shared
 ignore = Name .idea
 ignore = Name .DS_Store
 ignore = Name __pycache__
+ignore = Name sfprime-auto/artifacts
+ignore = Name sfprime-auto2/artifacts
+ignore = Name sfprime/dist
+ignore = Name sfprime/build
+ignore = Name sfprime/pybuild
+ignore = Name sfprime2/dist
+ignore = Name sfprime2/build
+ignore = Name sfprime2/pybuild
 
 # Follow sym links
 follow = Name *
