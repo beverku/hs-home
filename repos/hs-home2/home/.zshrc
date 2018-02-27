@@ -28,7 +28,7 @@ HYPHEN_INSENSITIVE="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -41,7 +41,7 @@ ENABLE_CORRECTION="true"
 # Settings for virtualenvwrapper - need to be before plugins
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/git
-export VIRTUALENVWRAPPER_PYTHON=python3
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 case `uname` in
     Darwin)
         export VIRTUALENVWRAPPER_VIRTUALENV=/Library/Frameworks/Python.framework/Versions/3.5/bin/virtualenv
@@ -108,7 +108,8 @@ fi
 
 
 # Export
-export PATH=${HOME}/bin:$PATH:/usr/local/bin
+=======
+export PATH=${HOME}/git/rb_scripts:${HOME}/bin:$PATH:/usr/local/bin
 
 # Python startup file
 # See: http://brandon.invergo.net/news/2014-03-21-Enhancing-the-Python-interpreter-with-a-start-up-script.html
@@ -136,6 +137,7 @@ alias pbcopy='xclip -selection primary'
 alias pbpaste='xclip -selection primary -o'
 
 alias agl='ag --literal'
+alias agnt="ag --literal --ignore '*_test.py'"
 
 #Set vi editing mode
 set -o vi
@@ -148,10 +150,23 @@ set -o vi
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv time)
 
+# This if statement is to work-around some problem with using material theme in pycharm on Linux
+# This is probably not the best method, but it works for now.  
+# I am assuming that /home/rbever/.local/share/applications/jna_jar.desktop is the ubuntu launcher file for pycharm. 
+# For terminator it is /usr/share/applications/terminator.desktop
+# For Gnome terminal it is unset
+#echo "GIO_LAUNCHED_DESKTOP_FILE=$GIO_LAUNCHED_DESKTOP_FILE"
+if [[ "$GIO_LAUNCHED_DESKTOP_FILE" == *"jna_jar.desktop"* ]]; then
+    POWERLEVEL9K_DISABLE_RPROMPT=true
+fi
+
 POWERLEVEL9K_PROMPT_ON_NEWLINE=false
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=false
 
 #POWERLEVEL9K_COLOR_SCHEME='light'
+
+POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='yellow'
+POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='236'
 
 POWERLEVEL9K_VCS_CLEAN_FOREGROUND='black'
 POWERLEVEL9K_VCS_CLEAN_BACKGROUND='green'

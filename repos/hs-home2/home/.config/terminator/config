@@ -10,12 +10,83 @@
   paste = <Primary>v
 [layouts]
   [[default]]
-    [[[child1]]]
-      parent = window0
-      type = Terminal
-    [[[window0]]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_window = True
+      maximised = False
+      order = 0
       parent = ""
+      position = 3863:24
+      size = 1257, 1388
+      title = rbever@rbever-ThinkStation-P500: ~
       type = Window
+    [[[child1]]]
+      active_page = 0
+      labels = None, None
+      last_active_term = c1c7e09a-e130-4ae7-9916-e7a6f2308d3c, f679d375-2c7a-4037-ae4f-2fbea9d8d359
+      order = 0
+      parent = child0
+      type = Notebook
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 677
+      ratio = 0.5
+      type = VPaned
+    [[[child3]]]
+      order = 0
+      parent = child2
+      position = 335
+      ratio = 0.499261447563
+      type = VPaned
+    [[[child6]]]
+      order = 1
+      parent = child2
+      position = 335
+      ratio = 0.499261447563
+      type = VPaned
+    [[[child9]]]
+      order = 1
+      parent = child1
+      position = 677
+      ratio = 0.5
+      type = VPaned
+    [[[terminal10]]]
+      order = 0
+      parent = child9
+      profile = default
+      type = Terminal
+      uuid = a3a7be0e-cc7d-48f7-aeb8-2f5b97f3d3f1
+    [[[terminal11]]]
+      order = 1
+      parent = child9
+      profile = default
+      type = Terminal
+      uuid = f679d375-2c7a-4037-ae4f-2fbea9d8d359
+    [[[terminal4]]]
+      order = 0
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = c1c7e09a-e130-4ae7-9916-e7a6f2308d3c
+    [[[terminal5]]]
+      order = 1
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = 77dda565-4efb-4968-85e8-2f90b1c22073
+    [[[terminal7]]]
+      order = 0
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = f179eeec-22e5-4a92-8a61-908ef14e467d
+    [[[terminal8]]]
+      order = 1
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 0de91cd1-f06b-4ad0-8599-0f2f82de4263
 [plugins]
 [profiles]
   [[default]]
