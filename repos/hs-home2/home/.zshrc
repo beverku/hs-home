@@ -49,7 +49,7 @@ case `uname` in
         alias md5sum='md5'                 # classify files in colour
         ;;
     *)
-        export VIRTUALENVWRAPPER_PYTHON=python3.5
+        export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
         export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
         ;;
 esac
