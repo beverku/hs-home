@@ -157,6 +157,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv time)
 # For Gnome terminal it is unset
 #echo "GIO_LAUNCHED_DESKTOP_FILE=$GIO_LAUNCHED_DESKTOP_FILE"
 if [[ "$GIO_LAUNCHED_DESKTOP_FILE" == *"jna_jar.desktop"* ]]; then
+    POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs virtualenv)
     POWERLEVEL9K_DISABLE_RPROMPT=true
 fi
 
