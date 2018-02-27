@@ -41,7 +41,7 @@ HYPHEN_INSENSITIVE="true"
 # Settings for virtualenvwrapper - need to be before plugins
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/git
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_PYTHON=python3
 case `uname` in
     Darwin)
         export VIRTUALENVWRAPPER_VIRTUALENV=/Library/Frameworks/Python.framework/Versions/3.5/bin/virtualenv
@@ -99,7 +99,7 @@ unsetopt share_history
 
 #Always execute this configuration regardless of interactivity
 if [ -f ~/.zshrc.thismachine.first.bash ]; then
-	source ~/.zshrc.thismachine.first.bash
+    source ~/.zshrc.thismachine.first.bash
 fi
 
 
@@ -108,7 +108,6 @@ fi
 
 
 # Export
-=======
 export PATH=${HOME}/git/rb_scripts:${HOME}/bin:$PATH:/usr/local/bin
 
 # Python startup file
