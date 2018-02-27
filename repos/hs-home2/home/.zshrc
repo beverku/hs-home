@@ -41,14 +41,15 @@ HYPHEN_INSENSITIVE="true"
 # Settings for virtualenvwrapper - need to be before plugins
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/git
-export VIRTUALENVWRAPPER_PYTHON=python3
 case `uname` in
     Darwin)
         export VIRTUALENVWRAPPER_VIRTUALENV=/Library/Frameworks/Python.framework/Versions/3.5/bin/virtualenv
+        export VIRTUALENVWRAPPER_PYTHON=/Library/Frameworks/Python.framework/Versions/3.5/bin/python3
         alias gvim='mvim'                 # classify files in colour
         alias md5sum='md5'                 # classify files in colour
         ;;
     *)
+        export VIRTUALENVWRAPPER_PYTHON=python3.5
         export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
         ;;
 esac
