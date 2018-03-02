@@ -1,0 +1,39 @@
+# Roots of the synchronization
+root = /Users/rbever
+root = ssh://workstation//home/rbever
+
+# Paths to synchronize 
+path = shared
+
+# Some regexps specifying names and paths to ignore
+ignore = Name .idea
+ignore = Name .DS_Store
+ignore = Name __pycache__
+ignore = Name sfprime-auto/artifacts
+ignore = Name sfprime-auto2/artifacts
+ignore = Name sfprime/dist
+ignore = Name sfprime/build
+ignore = Name sfprime/pybuild
+ignore = Name sfprime2/dist
+ignore = Name sfprime2/build
+ignore = Name sfprime2/pybuild
+# I used to synch .git and it worked OK, but then started having issues RE: file case differences
+# see: https://stackoverflow.com/questions/31628930/sync-directories-containing-git-repository-with-unison
+ignore = Name .git
+
+# Follow sym links
+follow = Name *
+
+# Keep a backup copy of every file in a central location
+backuplocation = central
+# Use the default equivalent to: backupdir = /home/rbever/.unison/backup 
+backup = Path *
+# backupprefix = $VERSION.
+# backupsuffix = 
+
+# Use this command for displaying diffs
+diff = diff -y -W 79 --suppress-common-lines
+
+# Log actions to logfile
+log = true
+logfile = /var/log/unison.log
