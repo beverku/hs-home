@@ -17,6 +17,9 @@ ignore = Name sfprime/pybuild
 ignore = Name sfprime2/dist
 ignore = Name sfprime2/build
 ignore = Name sfprime2/pybuild
+# I used to synch .git and it worked OK, but then started having issues RE: file case differences
+# see: https://stackoverflow.com/questions/31628930/sync-directories-containing-git-repository-with-unison
+ignore = Name .git
 
 # Follow sym links
 follow = Name *
