@@ -15,7 +15,7 @@
     #one-line log
     ll = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate --date=short
     #l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate --date=short -15
-    l = !"git --no-pager log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%an]' --decorate --date=short -15"
+    l = !"git --no-pager log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%an]' --decorate --date=short -10"
     #last commit
     last = !"git --no-pager log -1 HEAD"
     #log graphs
@@ -23,7 +23,7 @@
     lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(black)%s%C(reset) %C(dim black)- %an%C(reset)' --all
     lg = !"git lg1"
 
-    bblame = log -p -M --follow --stat -- 
+    bblame = log -p -M --follow --stat --
 
     a = add
     ap = add -p
@@ -36,6 +36,9 @@
     d = diff
     ds = diff --stat
     dc = diff --cached
+    # diff branch back to develop
+    diff-branch = diff develop...
+    db = !"git diff-branch"
 
     s = status
     ss = status -s
@@ -44,11 +47,12 @@
     # list branches sorted by last modified
     b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
 
-	#use git unstage filename
-	unstage = "reset HEAD --"
-	visual = !gitk &
+    #use git unstage filename
+    unstage = "reset HEAD --"
+    visual = !gitk &
 
     # list aliases
     la = "!git config -l | grep alias | cut -c 7-"
+    alias = !"git la"
 [credential]
-	helper = store
+    helper = store
